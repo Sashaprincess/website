@@ -5,10 +5,10 @@ import { useRouter } from 'next/navigation';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [activeDropdown, setActiveDropdown] = useState(null);
+    const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
     const router = useRouter();
 
-    const navigationItems = {
+    const navigationItems: Record<string, Array<{ name: string, scrollTo?: string, action?: string }>> = {
         Product: [
             { name: 'AI Assistant', scrollTo: 'products-section' },
             { name: 'InfluenceIQ KOL Finder', scrollTo: 'products-section' },
@@ -29,11 +29,11 @@ const Navbar = () => {
         ],
     };
 
-    const handleDropdownToggle = (item) => {
+    const handleDropdownToggle = (item: string) => {
         setActiveDropdown(activeDropdown === item ? null : item);
     };
 
-    const scrollToSection = (sectionId) => {
+    const scrollToSection = (sectionId: string) => {
         const element = document.getElementById(sectionId);
         if (element) {
             element.scrollIntoView({
@@ -51,10 +51,10 @@ const Navbar = () => {
         setIsOpen(false);
     };
 
-    const handleItemClick = (item) => {
+    const handleItemClick = (item: { name: string, scrollTo?: string, action?: string }) => {
         if (item.action === 'mailto') {
             handleContactClick();
-        } else {
+        } else if (item.scrollTo) {
             scrollToSection(item.scrollTo);
         }
     };
