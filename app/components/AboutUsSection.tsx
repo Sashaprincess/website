@@ -1,33 +1,30 @@
 "use client";
 
 import React from 'react';
-import { Linkedin, Twitter } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
 
 const AboutUsSection = () => {
     const teamMembers = [
         {
             name: "Shin Cao",
             title: "CEO & Co-Founder",
-            description: "Past: Litigation at O'Melveny",
-            image: "/team/Shin.jpeg", // 确保这个路径与你的文件名完全匹配
-            linkedin: "https://www.linkedin.com/in/shin-cao/",
-            twitter: "https://twitter.com/winston"
+            description: "Software Engineer",
+            image: "/team/Shin.jpeg",
+            linkedin: "https://www.linkedin.com/in/shin-cao/"
         },
         {
             name: "Jessica Yan",
             title: "CPO & Co-Founder",
-            description: "Past: Senior Engineer at Google",
-            image: "/team/jessie.jpg", // 确保这个路径与你的文件名完全匹配
-            linkedin: "https://www.linkedin.com/in/jie-yan-5a0268290/",
-            twitter: "https://twitter.com/jessicayan"
+            description: "Software Engineer",
+            image: "/team/jessie.jpg",
+            linkedin: "https://www.linkedin.com/in/jie-yan-5a0268290/"
         },
         {
             name: "Iris Zhou",
             title: "CTO & Co-Founder",
-            description: "Past: Product Manager at Meta",
-            image: "/team/Iris.jpeg", // 确保这个路径与你的文件名完全匹配
-            linkedin: "https://www.linkedin.com/in/ziqi-zhou-115a90290/",
-            twitter: "https://twitter.com/marcusr"
+            description: "Software Engineer",
+            image: "/team/Iris.jpeg",
+            linkedin: "https://www.linkedin.com/in/ziqi-zhou-115a90290/"
         }
     ];
 
@@ -80,27 +77,19 @@ const AboutUsSection = () => {
                                 <p className="text-slate-400 font-medium mb-2 text-lg">
                                     {member.title}
                                 </p>
-                                <p className="text-slate-500 mb-6 leading-relaxed">
-                                    {member.description}
-                                </p>
 
                                 {/* 社交媒体链接 - 极简风格 */}
-                                <div className="flex space-x-4">
+                                <div className="flex items-center space-x-3 mb-6">
+                                    <p className="text-slate-500 leading-relaxed">
+                                        {member.description}
+                                    </p>
                                     <a
                                         href={member.linkedin}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-slate-500 hover:text-slate-300 transition-colors duration-200"
                                     >
-                                        <Linkedin className="w-5 h-5" />
-                                    </a>
-                                    <a
-                                        href={member.twitter}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-slate-500 hover:text-slate-300 transition-colors duration-200"
-                                    >
-                                        <Twitter className="w-5 h-5" />
+                                        <Linkedin className="w-4 h-4" />
                                     </a>
                                 </div>
                             </div>
