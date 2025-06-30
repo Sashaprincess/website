@@ -58,13 +58,8 @@ const AboutUsSection = () => {
                                         alt={member.name}
                                         className="w-full h-full object-cover object-center"
                                         onError={(e) => {
-                                            // 如果图片加载失败，显示临时头像
-                                            const target = e.target as HTMLImageElement;
-                                            target.style.display = 'none';
-                                            const nextElement = target.nextSibling as HTMLElement;
-                                            if (nextElement) {
-                                                nextElement.style.display = 'flex';
-                                            }
+                                            // 临时注释掉错误处理
+                                            console.log('Image load error:', e);
                                         }}
                                     />
 
