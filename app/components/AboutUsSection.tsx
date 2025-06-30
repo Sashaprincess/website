@@ -59,8 +59,12 @@ const AboutUsSection = () => {
                                         className="w-full h-full object-cover object-center"
                                         onError={(e) => {
                                             // 如果图片加载失败，显示临时头像
-                                            e.target.style.display = 'none';
-                                            e.target.nextSibling.style.display = 'flex';
+                                            const target = e.target as HTMLImageElement;
+                                            target.style.display = 'none';
+                                            const nextElement = target.nextSibling as HTMLElement;
+                                            if (nextElement) {
+                                                nextElement.style.display = 'flex';
+                                            }
                                         }}
                                     />
 
