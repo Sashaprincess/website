@@ -16,7 +16,7 @@ const AboutUsSection = () => {
             name: "Jessica Yan",
             title: "CPO & Co-Founder",
             description: "Software Engineer",
-            image: "/team/jessie.jpg",
+            image: "/team/Jessie.jpg",
             linkedin: "https://www.linkedin.com/in/jie-yan-5a0268290/"
         },
         {
