@@ -5,7 +5,7 @@ import { Linkedin, Twitter } from 'lucide-react';
 
 const Footer = () => {
     // 添加滚动函数
-    const scrollToSection = (sectionId) => {
+    const scrollToSection = (sectionId: string) => {
         const element = document.getElementById(sectionId);
         if (element) {
             element.scrollIntoView({
