@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { ArrowLeft, Eye, EyeOff } from 'lucide-react';
+import { Eye, EyeOff } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
 export default function LoginPage() {
